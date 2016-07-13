@@ -54,6 +54,12 @@ SELECT name FROM world
 FROM world
 WHERE capital LIKE concat( '%', name, '%');
 
+SELECT name, capital FROM world
+WHERE capital LIKE concat(name, '_%');
+
+SELECT name, REPLACE(capital, name, '') AS extension FROM world
+WHERE capital LIKE concat(name, '_%');
+
 
 
 -- SELECT from WORLD
